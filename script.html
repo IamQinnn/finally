@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert dengan Backsound</title>
+</head>
+<body>
+
+<!-- Audio Backsound -->
+<audio id="backsound" autoplay loop>
+    <source src="backsound.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+</audio>
+
+<script>
+    // Play audio (untuk menghindari autoplay block)
+    window.onload = function() {
+        const audio = document.getElementById("backsound");
+        audio.play();
+
+        alert("⚠️ Peringatan!\nSelamat datang di website kami.");
+    };
+</script>
+
+</body>
+</html>
