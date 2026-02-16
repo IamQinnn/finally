@@ -2,25 +2,24 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>sayangggg</title>
+    <title>Sayanggg</title>
 </head>
-<body onclick="mulaiAlert()">
+<body>
 
 <audio id="backsound" loop>
     <source src="lv_0_20260217004147.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-let sudahMulai = false;
-
-function mulaiAlert() {
-    if (sudahMulai) return; // supaya tidak keulang
-    sudahMulai = true;
-
+window.onload = function() {
     const audio = document.getElementById("backsound");
-    audio.play(); // musik mulai saat alert pertama muncul
 
-    alert("Teruntuk kamu...")
+    alert("Teruntuk kamu...");
+
+    audio.play().catch(function() {
+        console.log("Autoplay diblokir browser");
+    });
+
     alert("Sayangkuuu....")
     alert("Aku ingin minta maaf")
     alert("Kejadian kemarin..")
@@ -42,7 +41,7 @@ function mulaiAlert() {
     alert("Tapi yang penting aku pengen...")
     alert("Minta maaf ke kamuu...")
     alert("Dengerin lagunya ya sayangg, biar kamu happy lagiii....")
-}
+};
 </script>
 
 </body>
