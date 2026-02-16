@@ -6,20 +6,18 @@
 </head>
 <body>
 
+<button onclick="mulai()">Klik dulu ya sayang 🤍</button>
+
 <audio id="backsound" loop>
     <source src="lv_0_20260217004147.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-window.onload = function() {
+function mulai() {
     const audio = document.getElementById("backsound");
+    audio.play();
 
-    alert("Teruntuk kamu...");
-
-    audio.play().catch(function() {
-        console.log("Autoplay diblokir browser");
-    });
-
+    alert("Teruntuk kamu...")
     alert("Sayangkuuu....")
     alert("Aku ingin minta maaf")
     alert("Kejadian kemarin..")
@@ -41,7 +39,7 @@ window.onload = function() {
     alert("Tapi yang penting aku pengen...")
     alert("Minta maaf ke kamuu...")
     alert("Dengerin lagunya ya sayangg, biar kamu happy lagiii....")
-};
+}
 </script>
 
 </body>
