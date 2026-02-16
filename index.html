@@ -2,20 +2,23 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Sayanggg</title>
+    <title>sayangggg</title>
 </head>
-<body>
-
-<button onclick="mulai()">Klik dulu ya sayang 🤍</button>
+<body onclick="mulaiAlert()">
 
 <audio id="backsound" loop>
     <source src="lv_0_20260217004147.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-function mulai() {
+let sudahMulai = false;
+
+function mulaiAlert() {
+    if (sudahMulai) return; // supaya tidak keulang
+    sudahMulai = true;
+
     const audio = document.getElementById("backsound");
-    audio.play();
+    audio.play(); // musik mulai saat alert pertama muncul
 
     alert("Teruntuk kamu...")
     alert("Sayangkuuu....")
